@@ -1,15 +1,34 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://db.com/logo_v2.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>Base44 APP</title>
-    <script type="module" crossorigin src="/jandjbabyshower/assets/index-evMZB93r.js"></script>
-    <link rel="stylesheet" crossorigin href="/jandjbabyshower/assets/index-CdlTbXDS.css">
+    <title>Joanne &amp; Jin's Baby Shower</title>
+    <meta
+      name="description"
+      content="RSVP for Joanne and Jin's baby shower."
+    />
+    <script>
+      (function restoreGithubPagesPath() {
+        const params = new URLSearchParams(window.location.search);
+        const redirectedPath = params.get("p");
+
+        if (!redirectedPath) {
+          return;
+        }
+
+        const redirectedQuery = params.get("q");
+        const nextPath = "/" + redirectedPath.replace(/^\/+/, "");
+        const nextUrl =
+          nextPath +
+          (redirectedQuery ? "?" + redirectedQuery : "") +
+          window.location.hash;
+
+        window.history.replaceState(null, "", nextUrl);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-tUX2V3ey.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ChpxlV0w.css">
   </head>
   <body>
     <div id="root"></div>

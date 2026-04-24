@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function redirectToAppShell() {
+        const path = window.location.pathname.replace(/^\/+/, "");
+        const query = window.location.search.replace(/^\?/, "");
+        const redirectUrl =
+          "/?p=" +
+          encodeURIComponent(path) +
+          (query ? "&q=" + encodeURIComponent(query) : "") +
+          window.location.hash;
+
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
