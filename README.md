@@ -30,8 +30,7 @@ The project is configured to publish to:
 
 `https://jandjbabyshower.github.io/`
 
-You can deploy the generated `dist` folder with:
+Deployment is handled by the GitHub Actions workflow at
+`.github/workflows/deploy-pages.yml`.
 
-```bash
-npm run deploy
-```
+In the repository settings, set Pages to use `GitHub Actions` as the source.
