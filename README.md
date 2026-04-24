@@ -1,41 +1,37 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+# Joanne & Jin's Baby Shower Site
 
-**Welcome to your Base44 project** 
+This project is a static Vite site for the baby shower invitation and RSVP page.
 
-**About**
+## Development
 
-View and Edit  your app on [db.com](http://db.com) 
+Install dependencies:
 
-This project contains everything you need to run your app locally.
-
-**Edit the code in your local development environment**
-
-Any change pushed to the repo will also be reflected in the Base44 Builder.
-
-**Prerequisites:** 
-
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
-
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.db.app
+```bash
+npm install
 ```
 
-Run the app: `npm run dev`
+Start the local dev server:
 
-**Publish your changes**
+```bash
+npm run dev
+```
 
-Open [db.com](http://db.com) and click on Publish.
+## Build
 
-**Docs & Support**
+Create a production build:
 
-Documentation: [https://docs.db.com/Integrations/Using-GitHub](https://docs.db.com/Integrations/Using-GitHub)
+```bash
+npm run build
+```
 
-Support: [https://app.db.com/support](https://app.db.com/support)
+## GitHub Pages
+
+The project is configured to publish to:
+
+`https://jandjbabyshower.github.io/`
+
+You can deploy the generated `dist` folder with:
+
+```bash
+npm run deploy
+```

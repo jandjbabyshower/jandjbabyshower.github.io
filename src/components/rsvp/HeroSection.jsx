@@ -1,9 +1,5 @@
-const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
-
 import React from "react";
 import { motion } from "framer-motion";
-
-const INVITE_IMAGE = "https://media.db.com/images/public/69e981275158f994779aa829/65fbfbdda_BBShower.png";
 
 // Cute teddy bear SVG
 function TeddyBear({ className = "" }) {
@@ -45,6 +41,46 @@ function TeddyBear({ className = "" }) {
   );
 }
 
+function InviteCard() {
+  return (
+    <div className="relative w-72 sm:w-80 rounded-[2rem] bg-card p-4 shadow-2xl border border-primary/15">
+      <div className="absolute inset-0 translate-x-2 translate-y-3 rounded-[2rem] bg-foreground/10 blur-sm" />
+      <div className="relative overflow-hidden rounded-[1.5rem] border border-primary/10 bg-gradient-to-b from-[#fff9ef] via-[#f8f4e7] to-[#eef2e6] p-6">
+        <div className="absolute -top-10 -right-8 h-28 w-28 rounded-full bg-primary/10 blur-2xl" />
+        <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-accent/15 blur-2xl" />
+
+        <div className="relative text-center">
+          <p className="font-body text-xs tracking-[0.35em] uppercase text-primary/80">
+            Baby Shower
+          </p>
+          <h2 className="mt-3 font-heading text-3xl font-bold text-foreground">
+            Joanne &amp; Jin
+          </h2>
+          <p className="mt-2 font-body text-sm text-foreground/65">
+            We Can Bearly Wait
+          </p>
+
+          <div className="my-6 flex justify-center">
+            <TeddyBear className="h-28 w-24" />
+          </div>
+
+          <div className="space-y-2 rounded-[1.25rem] bg-white/70 px-4 py-4 backdrop-blur-sm">
+            <p className="font-heading text-xl font-semibold text-primary">
+              June 27, 2026
+            </p>
+            <p className="font-body text-sm text-foreground/75">
+              2:00 PM to 5:00 PM
+            </p>
+            <p className="font-body text-sm text-foreground/75">
+              East Williamsburg
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden stripe-bg-strong flex flex-col items-center justify-center py-12 px-4">
@@ -60,15 +96,7 @@ export default function HeroSection() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="flex-shrink-0"
         >
-          <div className="relative">
-            {/* Paper shadow */}
-            <div className="absolute inset-0 translate-x-2 translate-y-3 bg-foreground/10 rounded-2xl blur-sm" />
-            <img
-              src={INVITE_IMAGE}
-              alt="Baby Shower Invitation"
-              className="relative w-72 sm:w-80 rounded-2xl shadow-2xl"
-            />
-          </div>
+          <InviteCard />
         </motion.div>
 
         {/* Right: Welcome Text */}
