@@ -1,0 +1,27 @@
+{
+  "name": "RSVP",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Guest name"
+    },
+    "attendance": {
+      "type": "string",
+      "enum": [
+        "honored",
+        "unable"
+      ],
+      "description": "Whether the guest can attend"
+    },
+    "guest_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of additional guests"
+    }
+  },
+  "required": [
+    "name",
+    "attendance"
+  ]
+}

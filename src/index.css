@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Cream background, sage green primary, warm brown accent */
+    --background: 60 30% 96%;
+    --foreground: 30 25% 18%;
+    --card: 60 30% 98%;
+    --card-foreground: 30 25% 18%;
+    --popover: 60 30% 98%;
+    --popover-foreground: 30 25% 18%;
+    --primary: 142 25% 38%;
+    --primary-foreground: 60 30% 97%;
+    --secondary: 30 35% 75%;
+    --secondary-foreground: 30 25% 18%;
+    --muted: 60 20% 90%;
+    --muted-foreground: 30 15% 45%;
+    --accent: 30 40% 65%;
+    --accent-foreground: 30 25% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 15% 78%;
+    --input: 142 15% 78%;
+    --ring: 142 25% 38%;
+    --chart-1: 142 25% 38%;
+    --chart-2: 30 40% 65%;
+    --chart-3: 30 25% 18%;
+    --chart-4: 60 30% 96%;
+    --chart-5: 142 15% 78%;
+    --radius: 1rem;
+    --sidebar-background: 60 30% 96%;
+    --sidebar-foreground: 30 25% 18%;
+    --sidebar-primary: 142 25% 38%;
+    --sidebar-primary-foreground: 60 30% 97%;
+    --sidebar-accent: 30 40% 65%;
+    --sidebar-accent-foreground: 30 25% 18%;
+    --sidebar-border: 142 15% 78%;
+    --sidebar-ring: 142 25% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: hsl(142 25% 38% / 0.2);
+  color: hsl(30 25% 18%);
+}
+
+/* Green & cream stripes background pattern */
+.stripe-bg {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 40px,
+    hsl(142 25% 38% / 0.12) 40px,
+    hsl(142 25% 38% / 0.12) 80px
+  );
+}
+
+.stripe-bg-strong {
+  background-image: repeating-linear-gradient(
+    0deg,
+    hsl(60 30% 97%),
+    hsl(60 30% 97%) 36px,
+    hsl(142 25% 38% / 0.55) 36px,
+    hsl(142 25% 38% / 0.55) 72px
+  );
+}
