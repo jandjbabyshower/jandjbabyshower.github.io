@@ -89,7 +89,7 @@ export default function RSVPForm() {
               key="success"
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="text-center py-16"
+              className="rounded-[2rem] border border-primary/15 bg-white/70 px-6 py-16 text-center shadow-lg backdrop-blur-sm"
             >
               <TeddySuccess />
               <h3 className="text-3xl font-bold mt-4">
@@ -104,7 +104,7 @@ export default function RSVPForm() {
               onSubmit={handleSubmit}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              className="space-y-5"
+              className="space-y-5 rounded-[2rem] border border-primary/15 bg-white/70 p-6 shadow-lg backdrop-blur-sm sm:p-8"
             >
               <Input
                 placeholder="Your Name"
@@ -126,7 +126,7 @@ export default function RSVPForm() {
               </Select>
 
               {formData.attendance === "honored" && (
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between rounded-[1.25rem] bg-white/65 px-4 py-3">
                   <span>Bringing a +1?</span>
                   <Switch
                     checked={formData.plusOne}

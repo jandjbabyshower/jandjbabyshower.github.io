@@ -26,15 +26,17 @@ export default function EventDetails() {
           transition={{ duration: 0.7 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <p className="font-body text-sm tracking-[0.25em] uppercase text-primary font-semibold mb-3">
-            Mark Your Calendar
-          </p>
-          <h2 className="font-heading text-3xl sm:text-5xl font-bold text-foreground">
-            The Details
-          </h2>
-          <p className="font-body text-muted-foreground mt-3 text-lg">
-            Come celebrate the little one on the way!
-          </p>
+          <div className="inline-block rounded-[2rem] border border-primary/15 bg-white/70 px-6 py-6 shadow-lg backdrop-blur-sm sm:px-8">
+            <p className="font-body text-sm tracking-[0.25em] uppercase text-primary font-semibold mb-3">
+              Mark Your Calendar
+            </p>
+            <h2 className="font-heading text-3xl sm:text-5xl font-bold text-foreground">
+              The Details
+            </h2>
+            <p className="font-body text-muted-foreground mt-3 text-lg">
+              Come celebrate the little one on the way!
+            </p>
+          </div>
         </motion.div>
 
         {/* Details Cards */}

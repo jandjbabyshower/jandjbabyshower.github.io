@@ -106,80 +106,82 @@ export default function HeroSection() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-center lg:text-left"
         >
-          {/* Floating Teddy */}
-          <motion.div
-            className="inline-block mb-4"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-          >
-            <TeddyBear className="w-24 h-28 mx-auto lg:mx-0" />
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mb-4 inline-flex items-center justify-center rounded-full border border-primary/15 bg-white/70 px-5 py-2 font-body text-sm font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur-sm lg:justify-start"
-          >
-            You're invited! 🎀
-          </motion.p>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.7 }}
-            className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-2"
-          >
-            We Can{" "}
-            <span className="text-primary italic">Bearly</span>{" "}
-            Wait!
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
-            className="font-body text-xl text-muted-foreground mb-2"
-          >
-            Join us for
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0 }}
-            className="font-heading text-2xl sm:text-3xl font-bold text-primary mb-1"
-          >
-            Joanne &amp; Jin's
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1 }}
-            className="font-body text-lg text-foreground/70 mb-8"
-          >
-            Baby Shower 🐻
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
-          >
-            <a
-              href="#rsvp"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-full hover:scale-105 transition-transform duration-300 shadow-lg"
+          <div className="rounded-[2rem] border border-primary/15 bg-white/65 px-6 py-8 shadow-xl backdrop-blur-sm sm:px-8">
+            {/* Floating Teddy */}
+            <motion.div
+              className="inline-block mb-4"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             >
-              🐾 RSVP Now
-            </a>
-            <a
-              href="#details"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-foreground font-body font-semibold text-lg rounded-full border-2 border-primary/30 hover:border-primary/60 transition-colors duration-300"
+              <TeddyBear className="w-24 h-28 mx-auto lg:mx-0" />
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="mb-4 inline-flex items-center justify-center rounded-full border border-primary/15 bg-white/70 px-5 py-2 font-body text-sm font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur-sm lg:justify-start"
             >
-              Event Details
-            </a>
-          </motion.div>
+              You're invited! 🎀
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.7 }}
+              className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-3"
+            >
+              We Can{" "}
+              <span className="text-primary italic">Bearly</span>{" "}
+              Wait!
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="font-body text-xl text-muted-foreground mb-2"
+            >
+              Join us for
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0 }}
+              className="font-heading text-2xl sm:text-3xl font-bold text-primary mb-1"
+            >
+              Joanne &amp; Jin's
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.1 }}
+              className="font-body text-lg text-foreground/70 mb-8"
+            >
+              Baby Shower 🐻
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+            >
+              <a
+                href="#rsvp"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground font-body font-semibold text-lg rounded-full hover:scale-105 transition-transform duration-300 shadow-lg"
+              >
+                🐾 RSVP Now
+              </a>
+              <a
+                href="#details"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-foreground font-body font-semibold text-lg rounded-full border-2 border-primary/30 hover:border-primary/60 transition-colors duration-300"
+              >
+                Event Details
+              </a>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 
