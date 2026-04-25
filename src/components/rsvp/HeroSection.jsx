@@ -122,7 +122,7 @@ export default function HeroSection() {
               transition={{ delay: 0.6 }}
               className="mb-4 inline-flex items-center justify-center rounded-full border border-primary/15 bg-white/70 px-5 py-2 font-body text-sm font-semibold uppercase tracking-[0.25em] text-primary shadow-sm backdrop-blur-sm lg:justify-start"
             >
-              You're invited! 🎀
+              You're invited!
             </motion.p>
 
             <motion.h1
