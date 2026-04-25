@@ -127,7 +127,7 @@ export default function RSVPForm() {
 
               {formData.attendance === "honored" && (
                 <div className="flex justify-between items-center">
-                  <span>Bring a +1?</span>
+                  <span>Bringing a +1?</span>
                   <Switch
                     checked={formData.plusOne}
                     onCheckedChange={(v) => setFormData({ ...formData, plusOne: v })}

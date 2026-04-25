@@ -30,7 +30,7 @@ export default function EventDetails() {
             Mark Your Calendar
           </p>
           <h2 className="font-heading text-3xl sm:text-5xl font-bold text-foreground">
-            The Details 🎀
+            The Details
           </h2>
           <p className="font-body text-muted-foreground mt-3 text-lg">
             Come celebrate the little one on the way!
@@ -60,18 +60,6 @@ export default function EventDetails() {
           ))}
         </div>
 
-        {/* Cute message */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-10 p-6 rounded-3xl bg-primary/8 border-2 border-primary/20 text-center"
-        >
-          <p className="font-body text-base text-foreground/80 leading-relaxed">
-            🐻 We're so excited to celebrate this new little cub with you!
-            Please join us for an afternoon filled with love, laughter, and lots of cuddles.
-          </p>
-        </motion.div>
       </div>
     </section>
   );
