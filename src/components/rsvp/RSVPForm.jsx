@@ -124,17 +124,6 @@ export default function RSVPForm() {
                   <SelectItem value="unable">Can't make it</SelectItem>
                 </SelectContent>
               </Select>
-
-              {formData.attendance === "honored" && (
-                <div className="flex items-center justify-between rounded-[1.25rem] bg-white/65 px-4 py-3">
-                  <span>Bringing a +1?</span>
-                  <Switch
-                    checked={formData.plusOne}
-                    onCheckedChange={(v) => setFormData({ ...formData, plusOne: v })}
-                  />
-                </div>
-              )}
-
               <button
                 type="submit"
                 disabled={submitting}
