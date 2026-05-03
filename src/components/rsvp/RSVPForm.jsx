@@ -107,7 +107,7 @@ export default function RSVPForm() {
               className="space-y-5 rounded-[2rem] border border-primary/15 bg-white/70 p-6 shadow-lg backdrop-blur-sm sm:p-8"
             >
               <Input
-                placeholder="Your Name"
+                placeholder="Party Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
