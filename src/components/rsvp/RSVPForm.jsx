@@ -2,6 +2,7 @@ const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSee8YaMw13L
 
 const FIELD_IDS = {
   name: "entry.430196529",
+  partySize: "entry.749321956",
   attendance: "entry.877086558",
   plusOne: "entry.1498135098",
 };
@@ -11,7 +12,6 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 
 function TeddySuccess() {
@@ -34,6 +34,7 @@ export default function RSVPForm() {
 
   const [formData, setFormData] = useState({
     name: "",
+    partySize: "",
     attendance: "",
     plusOne: false,
   });
@@ -55,12 +56,13 @@ export default function RSVPForm() {
       const form = new FormData();
 
       form.append(FIELD_IDS.name, formData.name);
+      form.append(FIELD_IDS.partySize, formData.partySize);
 
       // map your UI values → Google Form EXACT values
       const attendanceValue =
         formData.attendance === "honored"
           ? "Yes,  I'll be there"
-          : "No, I can't make it";
+          : "Sorry, can't make it";
 
       form.append(FIELD_IDS.attendance, attendanceValue);
       form.append(FIELD_IDS.plusOne, formData.plusOne ? "Yes" : "No");
@@ -110,6 +112,15 @@ export default function RSVPForm() {
                 placeholder="Party Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
+
+              <Input
+                type="number"
+                min="1"
+                inputMode="numeric"
+                placeholder="Party Size"
+                value={formData.partySize}
+                onChange={(e) => setFormData({ ...formData, partySize: e.target.value })}
               />
 
               <Select

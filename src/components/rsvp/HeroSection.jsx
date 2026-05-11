@@ -61,7 +61,11 @@ function InviteCard() {
           </p>
 
           <div className="my-6 flex justify-center">
-            <TeddyBear className="h-28 w-24" />
+            <img
+              src="/baby-shower-photo.jpg"
+              alt="Joanne and Jin"
+              className="h-44 w-36 rounded-[1.25rem] object-cover object-[50%_60%] shadow-md"
+            />
           </div>
 
           <div className="space-y-2 rounded-[1.25rem] bg-white/70 px-4 py-4 backdrop-blur-sm">
@@ -179,6 +183,14 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-foreground font-body font-semibold text-lg rounded-full border-2 border-primary/30 hover:border-primary/60 transition-colors duration-300"
               >
                 Event Details
+              </a>
+              <a
+                href="https://my.babylist.com/baby-joanne-jin"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-card text-foreground font-body font-semibold text-lg rounded-full border-2 border-primary/30 hover:border-primary/60 transition-colors duration-300"
+              >
+                Baby Registry
               </a>
             </motion.div>
           </div>
